@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2025 at 08:50 AM
+-- Generation Time: Oct 05, 2025 at 10:16 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -71,7 +71,7 @@ CREATE TABLE `orders` (
 CREATE TABLE `order_detial` (
   `order_detial_id` varchar(5) NOT NULL,
   `order_id` varchar(5) NOT NULL,
-  `customer_id` varchar(5) NOT NULL,
+  `product_id` varchar(5) NOT NULL,
   `quantity` int(11) NOT NULL,
   `unit_price` decimal(10,2) NOT NULL COMMENT 'ราคาต่อหน่วย'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -122,8 +122,8 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `order_detial`
   ADD PRIMARY KEY (`order_detial_id`),
-  ADD KEY `customer_id` (`customer_id`),
-  ADD KEY `order_id` (`order_id`);
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `product`
@@ -146,8 +146,8 @@ ALTER TABLE `orders`
 -- Constraints for table `order_detial`
 --
 ALTER TABLE `order_detial`
-  ADD CONSTRAINT `order_detial_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
-  ADD CONSTRAINT `order_detial_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`);
+  ADD CONSTRAINT `order_detial_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`),
+  ADD CONSTRAINT `order_detial_ibfk_3` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
 
 --
 -- Constraints for table `product`
