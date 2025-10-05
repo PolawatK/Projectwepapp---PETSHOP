@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background-color: #fff;
 }
 .menubar{
     display: flex;
@@ -42,19 +43,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+}
+.search-box i{
+    position: absolute;
+    margin-left: -350px;
+    color: rgb(160, 159, 159);
 }
 .search-box input{
-        width: 500px;
-        height: 35px;
-        border: 1px solid rgb(78, 78, 78);
-        padding: 10px;
-        border-radius: 10px;
-        margin-left: 100px;
+    width: 500px;
+    height: 35px;
+    border: 1px solid rgb(158, 158, 158);
+    padding: 10px 10px 10px 40px;
+    border-radius: 10px;
+    margin-left: 100px;
+    transition: 0.5s;
 }
 .search-box input:focus {
   outline: none;   
   box-shadow: none; 
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .logo{
@@ -62,49 +69,70 @@
     width: auto;
     display: flex;
     align-items: center;
-    padding-left: 100px;
+    padding-left: 150px;
 }
 .logo img{
     height: 80%;
     object-fit: cover;
     
 }
-header nav ul{
+nav ul{
     list-style: none;
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 60px;
     justify-content: space-between;
+    position: absolute;
 }
-header nav ul a{
+nav ul a{
     text-decoration: none;
     height: 100%;
     color: #ffffff;
     align-items: center;
-    width: 375px;
+    width: 250px;
     display: flex;
     transition: 0.3s;
     justify-content: center;
     font-size: 22px;
 }
-header nav ul li{
+nav ul li{
     height: 100%;
     display: flex;
     transition: 0.3s;
 }
-header nav{
+.main-nav{
     height: 60px;
+    width: 100%;
     background-color: #7a5e46;
-    padding: 0px 100px 0px 100px;
+    padding: 0px 150px 0px 150px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-header nav ul li:hover{
+nav ul li:hover{
     background-color: #eee7bb;
     color: #7a5e46;
 }
-header nav ul li:hover a{
+nav ul li:hover a{
     background-color: #eee7bb;
     color: #7a5e46;
 }
+nav ul li ul.nav-dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+nav ul li:hover ul.nav-dropdown {
+    display: block;
+}
+nav ul li ul.nav-dropdown li a{
+    background-color: #eeead4;
+    color: #aa9e92;
+}
+nav ul li ul.nav-dropdown li a:hover{
+    background-color: #eceadc;
+    color: #7a5e46;
+} 
 .active{
     background-color: #eee7bb;
     color: #7a5e46;
@@ -124,17 +152,92 @@ header nav ul li:hover a{
     line-height: 1.1; 
     color: #5a4634;
 }
+.pt-title h3{
+    color: #5a4634;
+}
 .pt-title button a{
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.5px;
     font-size: 20px;
+}
+.pt-title button i{
+    color: #fff;
+    padding-left: 10px;
 }
 .pt-title button{
     margin-top: 20px;
     padding: 20px 60px 20px 60px;
     border-radius: 30px;
-    border: none;
+    border: 1px solid #5a4634;
     background-color: #5a4634;
+    transition: 0.5s;
+}
+.pt-title button:hover{
+    border: 1px solid #5a4634;
+    color: #5a4634;
+    background-color: #fff;
+}
+.pt-title button:hover a{
+    color: #5a4634;
+}
+.pt-title button:hover i{
+    color: #5a4634;
+}
+.container-bd{
+    height: 350px;
+    padding-left: 100px;
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    cursor: grab; 
+}
+.container-bd a{
+    text-decoration: none;
+}
+.container-bd::-webkit-scrollbar {
+  display: none;
+}
+.title-bd{
+    padding-bottom: 20px;
+    padding-left: 100px;
+    color: #5a4634;
+}
+.item-box{
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    text-align: center;
+    color: #5a4634;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.219);
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.item-box:hover{
+    box-shadow: 1px 1px 100px 1px rgba(0, 0, 0, 0.219);
+    animation: float 0.5s ease-in-out infinite;
+}
+@keyframes float{
+    0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-4px); 
+  }
+}
+.it-title strong{
+    color: #a79c5a;
+}
+.it-img-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.it-img-box img{
+    object-fit: cover;
+    width: 70%;
+    height: 70%;
 }

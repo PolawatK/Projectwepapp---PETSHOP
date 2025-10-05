@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -14,6 +15,7 @@
             </div>
             <div class="search-box">
                 <input type="text">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="menubar">
                 <ul>
@@ -23,22 +25,61 @@
                 </ul>
             </div>
         </div>
-        <nav class="main-nav" id="mainNav">
+    </header>
+    <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="">อาหาร</a></li>
-                <li><a href="">ของเล่น</a></li>
-                <li><a href="">ดูเเล</a></li>
+                <li><a href="">อาหารสัตว์เลี้ยง</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="#">อาหารน้องหมา</a></li>
+                        <li><a href="#">อาหารน้องเเมว</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ของเล่นสัตว์เลี้ยง</a></li>
+                <li><a href="">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
-    </header>
     <div class="container-pt">
         <div class="pt-title">
             <h3>Good day Shop</h3>
             <h1>PET SHOP <br> & CARE</h1>
-            <button><a href="">WELCOME</a></button>
+            <button><a href="">เลือกซื้อสินค้า</a><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
+    <h1 class="title-bd">สินค้าขายดี</h1>
+    <div class="container-bd">
+            <a href="#"><div class="item-box">
+                <div class="it-img-box">
+                        <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/96/88/8851495001896/8851495001896_1-20240110102433-.jpg" alt="">
+                </div>
+                <div class="it-title">
+                        <h2>เเชมพูน้องหมา</h2>
+                        <h3><strong>ราคา : </strong> 2000</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="#"><div class="item-box">
+                <div class="it-img-box">
+                        <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/96/88/8851495001896/8851495001896_1-20240110102433-.jpg" alt="">
+                </div>
+                <div class="it-title">
+                        <h2>เเชมพูน้องหมา</h2>
+                        <h3><strong>ราคา : </strong> 2000</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="#"><div class="item-box">
+                <div class="it-img-box">
+                        <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/96/88/8851495001896/8851495001896_1-20240110102433-.jpg" alt="">
+                </div>
+                <div class="it-title">
+                        <h2>เเชมพูน้องหมา</h2>
+                        <h3><strong>ราคา : </strong> 2000</h3>
+                    </div>
+                </div>
+            </a>
+    </div>
+    <h1 class="title-bd">สินค้าขายดี</h1>
     <script src="js/script.js"></script>
 </body>
 </html>
