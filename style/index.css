@@ -110,14 +110,31 @@ header nav ul li:hover a{
     color: #7a5e46;
 }
 .container-pt{
-    height: 530px;
+    height: 550px;
     transition: background-image 1s ease-in-out;
     background-position: center;
     background-size: cover;
 }
 .pt-title{
-    padding: 100px;
+    padding: 100px 100px 100px 200px;
 }
-.pt-title{
-    padding: 100px;
+.pt-title h1{
+    font-size: 100px;
+    margin: 0;
+    line-height: 1.1; 
+    color: #5a4634;
+}
+.pt-title button a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+}
+.pt-title button{
+    margin-top: 20px;
+    padding: 20px 60px 20px 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #5a4634;
 }
