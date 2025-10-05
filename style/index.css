@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins,Itim,sans-serif;
+    color: black
+}
+.head-container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menubar{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-right: 100px;
+    max-width: fit-content;
+    width: 100%;
+}
+.menubar ul{
+    list-style: none;
+    display: flex;
+}
+.menubar ul a{
+    text-decoration: none;
+}
+.menubar ul li{
+    padding-right: 20px;
+}
+.regis-btn a{
+    padding: 10px 20px 10px 20px;
+    background-color: #7a5e46;;
+    border-radius: 3px;
+    color: #fff;
+}
+.search-box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.search-box input{
+        width: 500px;
+        height: 35px;
+        border: 1px solid rgb(78, 78, 78);
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: 100px;
+}
+.search-box input:focus {
+  outline: none;   
+  box-shadow: none; 
+}
+
+.logo{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+.logo img{
+    height: 80%;
+    object-fit: cover;
+    
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+header nav ul a{
+    text-decoration: none;
+    height: 100%;
+    color: #ffffff;
+    align-items: center;
+    width: 375px;
+    display: flex;
+    transition: 0.3s;
+    justify-content: center;
+    font-size: 22px;
+}
+header nav ul li{
+    height: 100%;
+    display: flex;
+    transition: 0.3s;
+}
+header nav{
+    height: 60px;
+    background-color: #7a5e46;
+    padding: 0px 100px 0px 100px;
+}
+header nav ul li:hover{
+    background-color: #eee7bb;
+    color: #7a5e46;
+}
+header nav ul li:hover a{
+    background-color: #eee7bb;
+    color: #7a5e46;
+}
+.active{
+    background-color: #eee7bb;
+    color: #7a5e46;
+}
+.container-pt{
+    background-size: contain;
+    height: 530px;
+    transition: background-image 1s ease-in-out;
+}
