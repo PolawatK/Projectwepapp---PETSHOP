@@ -110,7 +110,8 @@ header nav ul li:hover a{
     color: #7a5e46;
 }
 .container-pt{
-    background-size: contain;
     height: 530px;
     transition: background-image 1s ease-in-out;
+    background-position: center;
+    background-size: cover;
 }
