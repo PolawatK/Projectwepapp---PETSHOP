@@ -33,9 +33,17 @@
 }
 .regis-btn a{
     padding: 10px 20px 10px 20px;
-    background-color: #7a5e46;;
+    background-color: #7a5e46;
+    border: 2px solid #7a5e46;
     border-radius: 3px;
     color: #fff;
+    transition: 0.5s;
+}
+.regis-btn a:hover{
+    background-color: #ffffff;;
+    color: #7a5e46;
+    border-radius: 3px;
+    border: 2px solid #7a5e46;
 }
 .search-box{
     height: 100%;
@@ -62,6 +70,12 @@
   outline: none;   
   box-shadow: none; 
   border: 1px solid rgb(0, 0, 0);
+}
+.bell i{
+    color: rgb(139, 139, 139);
+}
+.cart i{
+    color: #919191;
 }
 
 .logo{
