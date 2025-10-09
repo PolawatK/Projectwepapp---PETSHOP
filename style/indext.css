@@ -205,8 +205,7 @@ nav ul li ul.nav-dropdown li a:hover{
     display: flex;
     max-width: 100%;
     overflow-x: auto;
-    -ms-overflow-style: none;
-    cursor: grab; 
+    scroll-behavior: smooth;
 }
 .container-bd a{
     text-decoration: none;
@@ -254,4 +253,62 @@ nav ul li ul.nav-dropdown li a:hover{
     object-fit: cover;
     width: 70%;
     height: 70%;
+}
+.slider-hot-item{
+    width: 100%;
+}
+.l-btn{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    z-index: 9;
+    background: transparent;
+    transition: 0.5s;
+}
+.l-btn:hover{
+    background: linear-gradient(180deg, rgb(255,255,255,0) 0%,#fff 100%);
+}
+.l-btn i{
+    font-size: 30px;
+    transition: 0.5s;
+}
+.l-btn i:hover{
+    color: #5a4634;
+}
+.r-btn{
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+}
+.r-btn:hover{
+    background: linear-gradient(90deg, rgb(255,255,255,0) 0%,#fff 100%);
+}
+.r-btn i{
+    font-size: 30px;
+    transition: 0.5s;
+}
+.r-btn i:hover{
+    color: #5a4634;
+}
+.Petfood{
+ display: grid;
+  margin-left: 90px;
+  grid: 10px;
+  grid-template-columns: repeat(5, 1fr);                        
+  background-color: #ffffff;
+  padding: 10px;
 }
