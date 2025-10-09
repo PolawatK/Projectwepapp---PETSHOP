@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2025 at 10:16 AM
+-- Generation Time: Oct 09, 2025 at 03:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,6 +32,19 @@ CREATE TABLE `category` (
   `category_name` varchar(80) NOT NULL,
   `description` text NOT NULL COMMENT 'รายละเอียดหมวดหมู่'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`category_id`, `category_name`, `description`) VALUES
+('1', 'อาหารสุนัข', ''),
+('2', 'อาหารแมว', ''),
+('3', 'ทราย/สุขอนามัย', ''),
+('4', 'ปลอกคอ/สายจูง', ''),
+('5', 'กรงสัตว์', ''),
+('6', 'ผลิตภัณฑ์ดูแลสุขภาพ', ''),
+('7', 'ของเล่นสัตว์เลี้ยง', '');
 
 -- --------------------------------------------------------
 
@@ -93,6 +106,22 @@ CREATE TABLE `product` (
   `description` text NOT NULL COMMENT 'รายละเอียดสินค้า\r\n',
   `image_url` varchar(255) NOT NULL COMMENT 'เก็บ Path รูปภาพ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`product_id`, `product_name`, `category_id`, `brand`, `price`, `stock_qty`, `unit`, `description`, `image_url`) VALUES
+('p001', 'อาหารเม็ดสุนัขโต 10 กก.', '1', 'Pedigree', 850.00, 20, 'ถุง', 'อาหารเม็ดสูตรโปรตีนสูงสำหรับสุนัขโต', ''),
+('p002', 'อาหารเม็ดลูกสุนัข 5 กก.', '1', 'SmartHeart', 420.00, 15, 'ถุง', 'อาหารเม็ดสูตรพิเศษสำหรับลูกสุนัข', ''),
+('p003', 'อาหารเม็ดแมวโต 3 กก.', '2', 'Whiskas', 320.00, 25, 'ถุง', 'อาหารเม็ดแมวโตสูตรปลาทะเล', ''),
+('p004', 'ทรายแมว 10 ลิตร', '3', 'CattyMan', 180.00, 40, 'ถุง', 'ทรายแมวดูดซับกลิ่นดี', ''),
+('p005', 'ปลอกคอสุนัข ขนาดกลาง', '4', 'PetLover', 150.00, 30, 'ชิ้น', 'ปลอกคอไนล่อน ปรับขนาดได้', ''),
+('p006', 'สายจูงสุนัข 1.5 ม.', '4', 'PetLover', 190.00, 25, 'ชิ้น', 'สายจูงไนล่อน ทนทาน', ''),
+('p007', 'กรงนก ขนาดเล็ก', '5', 'HappyBird', 450.00, 10, 'ชิ้น', 'กรงนกเหล็กเคลือบกันสนิม', ''),
+('p008', 'วิตามินรวมสุนัข', '6', 'NutriPet', 220.00, 18, 'ขวด', 'วิตามินเสริมภูมิคุ้มกันสำหรับสุนัข', ''),
+('p009', 'แชมพูอาบน้ำแมว', '6', 'PetCare', 160.00, 22, 'ขวด', 'แชมพูสูตรอ่อนโยนสำหรับแมว', ''),
+('p010', 'ของเล่นสุนัขยางกัด', '7', 'FunPet', 95.00, 35, 'ชิ้น', 'ของเล่นยางกัดสำหรับสุนัขทุกวัย', '');
 
 --
 -- Indexes for dumped tables
