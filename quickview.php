@@ -49,7 +49,23 @@
                 <li><a href="" class="<?= $category_id == '6' ? 'active' : '' ?>">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
-    <h1><?=$row['product_name'];?></h1>
+    <div class="BGOut">
+            <div class="BGProduct">
+                <div class="data_left">
+                    <div>
+                        <img src="<?=$row['image_url'];?>" >
+                    </div>
+                </div>
+                <div class="data_right">
+                    <h1><?=$row['product_name'];?></h1>
+                    <h2>ยี่ห้อ : <?=$row['brand'];?></h2>
+                    <h2>คำอธิบาย : <?=$row['description'];?></h2>
+                    <h2>ราคา : ฿<?=$row['price'];?></h2>
+                    <h2>จำนวนที่มี : <?=$row['stock_qty'];?></h2>
+                    <a href="Login.php"><button>ซื้อสินค้า</button></a>  <!--เดี๋ยวมาแก้-->
+                </div>
+            </div>
+        </div>
     <script src="js/scripts.js"></script>
 </body>
 </html>
