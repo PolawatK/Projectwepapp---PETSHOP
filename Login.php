@@ -25,6 +25,10 @@
                                 <p>รหัสผ่าน</p>
                                 <input type="password" required>
                             </div>
+                            <div class="check-box">
+                                <input type="checkbox">
+                                <p>จดจำรหัสผ่าน</p>
+                            </div>
                             <button type="submit" class="sub-btn">เข้าสู่ระบบ</button>
                         </form>
                     </div>
