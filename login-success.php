@@ -13,6 +13,7 @@ if (isset($_POST['sub-user-btn'])) {
         $customer = $result->fetch_assoc();
 
         if (password_verify($password, $customer['cus_password'])) {
+            $_SESSION['cus_id'] = $customer['cus_id'];
             $_SESSION['cus_fname'] = $customer['cus_fname'];
             $_SESSION['cus_lname'] = $customer['cus_lname'];
             $_SESSION['cus_email'] = $customer['cus_email'];
