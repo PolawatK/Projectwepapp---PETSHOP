@@ -57,7 +57,7 @@
                $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
+                            echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
                             echo '<img src="' . $row["image_url"] . '" alt="">';

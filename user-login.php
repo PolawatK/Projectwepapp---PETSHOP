@@ -31,7 +31,7 @@ session_start();
             <div class="menubar">
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
-                    <li class="bell"><a href="">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
+                    <li class="bell"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
                     <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="regis-btn"><a href="login.php">ออกจากระบบ</a></li>
                 </ul>
