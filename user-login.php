@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="style/indext.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<?php
+session_start();
+
+    if (!isset($_SESSION['cus_email'])) {
+    header("Location: login.php");
+    exit();
+}
+    $fname = $_SESSION['cus_fname'];
+    $lname = $_SESSION['cus_lname'];
+    $email = $_SESSION['cus_email'];
+?>
 <body>
     <header>
         <div class="head-container">
@@ -20,8 +31,9 @@
             <div class="menubar">
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
+                    <li class="bell"><a href="">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
                     <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="regis-btn"><a href="login.php">เข้าสู่ระบบ</a></li>
+                    <li class="regis-btn"><a href="login.php">ออกจากระบบ</a></li>
                 </ul>
             </div>
         </div>
@@ -106,6 +118,6 @@
     
 
 
-    <script src="js/scripts.js"></script>
+    <script src="js/index-script.js"></script>
 </body>
 </html>
