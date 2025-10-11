@@ -155,47 +155,28 @@ nav ul li ul.nav-dropdown li a:hover{
     display: flex;
     justify-content: center;
     text-align: center;
-<<<<<<< HEAD
     height: 100vh;
    
     
-=======
-    height: 762px;
-    background-color: #f1f1f1;
->>>>>>> 89f035fcdbc11cc748f1df0c0f5ba984221ab933
 }
 .BGProduct{
     display: flex;
     justify-content: center;
     text-align: center;
-<<<<<<< HEAD
     margin-bottom: 140px;
     margin-top: 70px;
     border-radius: 10px;
    
 
-=======
-    background-color: #ffffff;
-    margin-bottom: 140px;
-    margin-top: 70px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.219);
->>>>>>> 89f035fcdbc11cc748f1df0c0f5ba984221ab933
 }
 .data_right{
     padding-top: 100px;
     padding-right: 30px;
-<<<<<<< HEAD
     
 }
 .data_left{
     padding-top: 20px;
     
-=======
-}
-.data_left{
-    padding-top: 20px;
->>>>>>> 89f035fcdbc11cc748f1df0c0f5ba984221ab933
 }
 .data_left img{
     width: 500px;
@@ -207,7 +188,6 @@ nav ul li ul.nav-dropdown li a:hover{
 .data_right h2{
     display: flex;
     justify-content: left;
-<<<<<<< HEAD
     font-weight: 300;
 }
 .data_right h1{
@@ -218,12 +198,6 @@ nav ul li ul.nav-dropdown li a:hover{
 .button_right button{
     margin-top: 108px;
     padding: 10px 50px 10px 50px;
-=======
-}
-button{
-    margin-top: 100px;
-    padding: 20px 50px 20px 50px;
->>>>>>> 89f035fcdbc11cc748f1df0c0f5ba984221ab933
     font-size: 20px;
     margin-left: -30px;
     border-radius: 10px ;
@@ -231,7 +205,6 @@ button{
     background-color: #5a4634;
     color: rgb(255, 255, 255);
 }
-<<<<<<< HEAD
 .button_right button:hover{
     color: #5a4634;
     background-color: #ffffff;
@@ -387,10 +360,3 @@ button{
 }
 
 
-=======
-button:hover{
-    color: #5a4634;
-    background-color: #ffffff;
-    transition: 0.5s;
-}
->>>>>>> 89f035fcdbc11cc748f1df0c0f5ba984221ab933
