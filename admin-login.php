@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style/admin.css">
+    <link rel="stylesheet" href="style/admins.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <?php
@@ -23,9 +23,10 @@ session_start();
     $admin_picture = $_SESSION['admin_picture'];
 ?>
 <body>
+    <div class="container-bd">
     <nav>
         <ul>
-            <a href="">
+            <a href="admin-login.php">
                 <li class="active">
                     <i class="fa-solid fa-house"></i>
                     หน้าเเรก
@@ -37,7 +38,7 @@ session_start();
                     จัดการลูกค้า
                 </li>
             </a>
-            <a href="">
+            <a href="admin-product.php">
                 <li>
                     <i class="fa-solid fa-box-open"></i>
                     จัดการสินค้า
@@ -45,6 +46,12 @@ session_start();
             </a>
         </ul>
     </nav>
+        <div class="container-data">
+        <h1>ยินดีต้อนรับคุณ , <?php echo "<span>$admin_fname</span>"; ?></h1>
+        
+        </div>
+    </div>
+    
 
     
 </body>

@@ -33,13 +33,13 @@ session_start();
                 </li>
             </a>
             <a href="admin-customer.php">
-                <li class="active">
+                <li >
                     <i class="fa-solid fa-users-gear"></i>
                     จัดการลูกค้า
                 </li>
             </a>
             <a href="admin-product.php">
-                <li>
+                <li class="active">
                     <i class="fa-solid fa-box-open"></i>
                     จัดการสินค้า
                 </li>
@@ -47,39 +47,47 @@ session_start();
         </ul>
     </nav>
     <div class="container-data">
-        <h1>จัดการลูกค้า</h1>
+        <h1>จัดการสินค้า</h1>
         <hr>
         <div class="table-data">
             <table>
                 <thead>
                     <tr>
-                        <th>รหัสลูกค้า</th>
-                        <th>ชื่อ-นามสกุล</th>
-                        <th>ชื่อบัญชีผู้ใช้</th>
-                        <th>เบอร์โทร</th>
-                        <th>อีเมล</th>
-                        <th>ที่อยู่</th>
+                        <th>รหัสสินค้า</th>
+                        <th>ชื่อสินค้า</th>
+                        <th>รหัสชนิดสินค้า</th>
+                        <th>เเบรนด์</th>
+                        <th>ราคา</th>
+                        <th>จำนวนคงเหลือ</th>
+                        <th>หน่วย</th>
+                        <th>คำอธิบาย</th>
+                        <th>รูปภาพ</th>
                         <th>ธุรกรรม</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody><img src="" alt="">
                     <?php // show data by fetch from database
                             require('conn.php');
-                            $sql = "SELECT * FROM customer";
+                            $sql = "SELECT * FROM product";
                             $result = $conn->query($sql);
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<tr>";
-                                        echo "<td>".$row['cus_id']."</td>";
-                                        echo "<td>".htmlspecialchars($row['cus_fname'].' '.$row['cus_lname'])."</td>";
-                                        echo "<td>".htmlspecialchars($row['cus_username'])."</td>";
-                                        echo "<td>".htmlspecialchars($row['cus_phone'])."</td>";
-                                        echo "<td>".htmlspecialchars($row['cus_email'])."</td>";
-                                        echo "<td>".htmlspecialchars($row['cus_address'])."</td>";
+                                        echo "<td>".$row['product_id']."</td>";
+                                        echo "<td>".$row['product_name']."</td>";
+                                        echo "<td>".$row['category_id']."</td>";
+                                        echo "<td>".$row['brand']."</td>";
+                                        echo "<td>".$row['price']."</td>";
+                                        echo "<td>".$row['stock_qty']."</td>";
+                                        echo "<td>".$row['unit']."</td>";
+                                        echo "<td>".$row['description']."</td>";
+                                        echo "<td>";
+                                        echo "<img src=".$row['image_url']." >";
+                                        echo "</td>";
                                         echo '<td class="t-button">
-                                                <a href="adminedit-cus.php?cus_id='.$row['cus_id'].'"><button type="button">แก้ไข</button></a>
-                                                <form method="post" action="delete-customer.php" onsubmit="return confirm(\'ต้องการลบผู้ใช้ '.addslashes($row['cus_fname'].' '.$row['cus_lname']).' หรือไม่?\');">
-                                                    <input type="hidden" name="cus_id" value="'.$row['cus_id'].'">
+                                                <a href="adminedit-product.php?product_id='.$row['product_id'].'"><button type="button">แก้ไข</button></a>
+                                                <form method="post" action="delete-customer.php" onsubmit="return confirm(\'ต้องการลบผู้ใช้ '.addslashes($row['product_name']).' หรือไม่?\');">
+                                                    <input type="hidden" name="product_id" value="'.$row['product_id'].'">
                                                     <button type="submit" name="delete-btn">ลบ</button>
                                                 </form>
                                             </td>';
