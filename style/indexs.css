@@ -491,3 +491,43 @@ footer{
     font-size: 16px;
     padding: 7px;
 }
+
+.infinite-container{
+    padding-bottom: 35px;
+}
+
+.infinite-container h1{
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    color: #5a4634;
+    padding-top: 30px;
+}
+
+.infinite{
+    background-color: var(--sec color);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0px;
+}
+
+.infi-logo img{
+    height: 120px;
+    margin: 0px 30px;
+    cursor: pointer;
+}
+
+.infi-logo{
+    display: inline-flex;
+    white-space: nowrap;
+    animation: 30s slide infinite linear;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

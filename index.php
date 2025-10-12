@@ -80,6 +80,39 @@
                 ?>
     </div>
     </div>
+
+    <div class="infinite-container">
+        <h1>แบรนด์ที่มีของในสต็อก</h1>
+        <div class ="infinite">
+            <div class = "infi-logo">
+                <img src="img/logo/1.png" alt="">
+                <img src="img/logo/2.png" alt="">
+                <img src="img/logo/3.png" alt="">
+                <img src="img/logo/4.png" alt="">
+                <img src="img/logo/5.png" alt="">
+                <img src="img/logo/6.png" alt="">
+            </div>
+
+            <div class = "infi-logo">
+                <img src="img/logo/1.png" alt="">
+                <img src="img/logo/2.png" alt="">
+                <img src="img/logo/3.png" alt="">
+                <img src="img/logo/4.png" alt="">
+                <img src="img/logo/5.png" alt="">
+                <img src="img/logo/6.png" alt="">
+            </div>
+
+            <div class = "infi-logo">
+                <img src="img/logo/1.png" alt="">
+                <img src="img/logo/2.png" alt="">
+                <img src="img/logo/3.png" alt="">
+                <img src="img/logo/4.png" alt="">
+                <img src="img/logo/5.png" alt="">
+                <img src="img/logo/6.png" alt="">
+            </div>
+        </div>
+    </div>
+
     </section>
     <h1 class="title-bd" id="petfood">อาหารสัตว์เลี้ยง</h1>
     <hr>
@@ -268,8 +301,7 @@
         </div>
     </footer>
     
-
-
     <script src="js/index-script.js"></script>
 </body>
 </html>
+
