@@ -33,4 +33,3 @@ const images = [
     productSlider.scrollLeft -= productSlider.clientWidth;
   });
 
-   

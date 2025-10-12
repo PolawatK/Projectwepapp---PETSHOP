@@ -1,5 +1,6 @@
-//ทำกล่องไอเทมเลื่อนครับอาจารย์
 
+
+//ทำกล่องไอเทมเลื่อนครับอาจารย์
   const productSlider = document.querySelector('.container-bd');
   const nextBtn = document.querySelector('.r-btn');
   const prevBtn = document.querySelector('.l-btn');

@@ -20,6 +20,18 @@
         $row = mysqli_fetch_array($result);
         $category_id = $row['category_id']; 
     ?>
+    <?php
+session_start();
+
+    if (!isset($_SESSION['cus_email'])) {
+    header("Location: login.php");
+    exit();
+}
+    $fname = $_SESSION['cus_fname'];
+    $lname = $_SESSION['cus_lname'];
+    $email = $_SESSION['cus_email'];
+?>
+<body>
     <header>
         <div class="head-container">
             <div class="logo">
@@ -33,22 +45,25 @@
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
                     <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="regis-btn"><a href="#">เข้าสู่ระบบ</a></li>
+                    <li class="bell"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
+                    <li class="regis-btn"><a href="login.php">ออกจากระบบ</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <nav class="main-nav" id="mainNav">
             <ul>
-                <li><a href="index.php" >หน้าแรก</a></li>
-                <li><a href="petfood.php" class="<?= $category_id == '1' || $category_id == '2' ? 'active' : '' ?>">อาหารสัตว์เลี้ยง</a>
+                <li><a href="user-login.php">หน้าแรก</a></li>
+                <li><a href="#" class="<?= in_array($category_id, [1,2]) ? 'active' : '' ?>">อาหารสัตว์เลี้ยง</a>
                     <ul class="nav-dropdown">
-                        <li><a href="#" class="<?= $category_id == '1' ? 'active' : '' ?>">อาหารน้องหมา</a></li>
-                        <li><a href="#" class="<?= $category_id == '2' ? 'active' : '' ?>">อาหารน้องเเมว</a></li>
+                        <li><a href="user-login.php" class="<?= ($category_id == 1) ? 'active' : '' ?>">อาหารน้องหมา</a></li>
+                        <li><a href="user-login.php" class="<?= ($category_id == 2) ? 'active' : '' ?>">อาหารน้องเเมว</a></li>
                     </ul>
                 </li>
-                <li><a href="" class="<?= $category_id == '7' ? 'active' : '' ?>">ของเล่นสัตว์เลี้ยง</a></li>
-                <li><a href="" class="<?= $category_id == '6' ? 'active' : '' ?>">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
+                <li><a href="user-login.php" class="<?= ($category_id == 4) ? 'active' : '' ?>">ปลอกคอเเละสายจูง</a></li>
+                <li><a href="user-login.php" class="<?= ($category_id == 5) ? 'active' : '' ?>">กระเป๋าสัตว์เลี้ยง</a></li>
+                <li><a href="user-login.php" class="<?= ($category_id == 6) ? 'active' : '' ?>">ของเล่นสัตว์เลี้ยง</a></li>
+                <li><a href="user-login.php" class="<?= ($category_id == 3) ? 'active' : '' ?>">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
     <div class="BGOut">
@@ -81,16 +96,15 @@
             </div>
     </div>
     <div class="UnderBG">
-    <hr>
-    <h1 class="title-bd">สินค้ารายการอื่น</h1>
+   <h1 class="title-bd" id="bestseller">สินค้ารายการอื่น</h1>
+    <hr class="hr-item">
     <div class="slider-hot-item">
     <button class="l-btn"><i class="fa-solid fa-chevron-left"></i></button>
     <button class="r-btn"><i class="fa-solid fa-chevron-right"></i></button>
     <div class="container-bd">
         <?php 
                 require("conn.php");
-                $product_id = $_GET['product_id'];
-                $sql = "SELECT * FROM product WHERE product_id != '$product_id'";
+                $sql = "SELECT * FROM product";
                $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {

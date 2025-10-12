@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style/indext.css">
+    <link rel="stylesheet" href="style/indexs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -29,24 +29,28 @@
     <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="index.php">หน้าแรก</a></li>
-                <li><a href="petfood.php">อาหารสัตว์เลี้ยง</a>
+                <li><a href="#petfood">อาหารสัตว์เลี้ยง</a>
                     <ul class="nav-dropdown">
-                        <li><a href="#">อาหารน้องหมา</a></li>
-                        <li><a href="#">อาหารน้องเเมว</a></li>
+                        <li><a href="#dogfood" >อาหารน้องหมา</a></li>
+                        <li><a href="#catfood" >อาหารน้องเเมว</a></li>
                     </ul>
                 </li>
-                <li><a href="">ของเล่นสัตว์เลี้ยง</a></li>
-                <li><a href="">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
+                <li><a href="#lead">ปลอกคอเเละสายจูง</a></li>
+                <li><a href="#petbackpack">กระเป๋าสัตว์เลี้ยง</a></li>
+                <li><a href="#pettoy">ของเล่นสัตว์เลี้ยง</a></li>
+                <li><a href="#petcare">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
     <div class="container-pt">
         <div class="pt-title">
             <h3>Good day Shop</h3>
             <h1>PET SHOP <br> & CARE</h1>
-            <button><a href="">เลือกซื้อสินค้า</a><i class="fa-solid fa-arrow-right"></i></button>
+            <a href="login.php"><button>เลือกซื้อสินค้า<i class="fa-solid fa-arrow-right"></i></button></a>
         </div>
     </div>
+    <section id="bestseller">
     <h1 class="title-bd">สินค้าขายดี</h1>
+    <hr>
     <div class="slider-hot-item">
     <button class="l-btn"><i class="fa-solid fa-chevron-left"></i></button>
     <button class="r-btn"><i class="fa-solid fa-chevron-right"></i></button>
@@ -76,15 +80,18 @@
                 ?>
     </div>
     </div>
-    <h1 class="title-bd">อาหารสัตว์เลี้ยง</h1>
-    <div class="Petfood">
+    </section>
+    <h1 class="title-bd" id="petfood">อาหารสัตว์เลี้ยง</h1>
+    <hr>
+    <p class="title-bd-descript" id="dogfood">🐶อาหารหมา</p>
+    <div class="container-bd">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 1";
                $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo '<a href="#">';
+                            echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
                             echo '<img src="' . $row["image_url"] . '" alt="">';
@@ -100,9 +107,143 @@
                         echo "ไม่มีสินค้า";
                     }
                     $conn->close();
-
             ?>
     </div>
+    <p class="title-bd-descript"id="catfood">🐱อาหารเเมว</p>
+    <div class="container-bd" >
+            <?php 
+               require("conn.php");
+               $sql = "SELECT * FROM product WHERE category_id = 2";
+               $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<a href='login.php'>";
+                            echo '<div class="item-box">';
+                            echo '<div class="it-img-box">';
+                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '</div>';
+                            echo '  <div class="it-title">';
+                            echo '      <h2>' . $row["product_name"] . '</h2>';
+                            echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
+                            echo '  </div>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }else {
+                        echo "ไม่มีสินค้า";
+                    }
+                    $conn->close();
+            ?>
+    </div>
+    <h1 class="title-bd" id="lead">ปลอกคอเเละสายจูง</h1>
+    <hr>
+    <div class="container-bd">
+            <?php 
+               require("conn.php");
+               $sql = "SELECT * FROM product WHERE category_id = 4";
+               $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<a href='login.php'>";
+                            echo '<div class="item-box">';
+                            echo '<div class="it-img-box">';
+                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '</div>';
+                            echo '  <div class="it-title">';
+                            echo '      <h2>' . $row["product_name"] . '</h2>';
+                            echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
+                            echo '  </div>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }else {
+                        echo "ไม่มีสินค้า";
+                    }
+                    $conn->close();
+            ?>
+    </div>
+    <h1 class="title-bd" id="petbackpack">กระเป๋าสัตว์เลี้ยง</h1>
+    <hr>
+    <div class="container-bd">
+            <?php 
+               require("conn.php");
+               $sql = "SELECT * FROM product WHERE category_id = 5";
+               $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<a href='login.php'>";
+                            echo '<div class="item-box">';
+                            echo '<div class="it-img-box">';
+                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '</div>';
+                            echo '  <div class="it-title">';
+                            echo '      <h2>' . $row["product_name"] . '</h2>';
+                            echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
+                            echo '  </div>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }else {
+                        echo "ไม่มีสินค้า";
+                    }
+                    $conn->close();
+            ?>
+    </div>
+    <h1 class="title-bd" id="pettoy">ของเล่นสัตว์เลี้ยง</h1>
+    <hr>
+    <div class="container-bd">
+            <?php 
+               require("conn.php");
+               $sql = "SELECT * FROM product WHERE category_id = 6";
+               $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<a href='login.php'>";
+                            echo '<div class="item-box">';
+                            echo '<div class="it-img-box">';
+                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '</div>';
+                            echo '  <div class="it-title">';
+                            echo '      <h2>' . $row["product_name"] . '</h2>';
+                            echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
+                            echo '  </div>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }else {
+                        echo "ไม่มีสินค้า";
+                    }
+                    $conn->close();
+            ?>
+    </div>
+    <h1 class="title-bd" id="petcare">ผลิตภัณฑ์ดูแลสุขภาพ</h1>
+    <hr>
+    <div class="container-bd">
+            <?php 
+               require("conn.php");
+               $sql = "SELECT * FROM product WHERE category_id = 3";
+               $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<a href='login.php'>";
+                            echo '<div class="item-box">';
+                            echo '<div class="it-img-box">';
+                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '</div>';
+                            echo '  <div class="it-title">';
+                            echo '      <h2>' . $row["product_name"] . '</h2>';
+                            echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
+                            echo '  </div>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }else {
+                        echo "ไม่มีสินค้า";
+                    }
+                    $conn->close();
+            ?>
+    </div>
+
     
     
 
