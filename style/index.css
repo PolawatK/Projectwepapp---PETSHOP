@@ -109,7 +109,7 @@ nav ul a{
     height: 100%;
     color: #ffffff;
     align-items: center;
-    width: 250px;
+    width: 220px;
     display: flex;
     transition: 0.3s;
     justify-content: center;
@@ -159,9 +159,16 @@ nav ul li ul.nav-dropdown li a:hover{
 }
 .container-pt{
     height: 550px;
+    width: 100%;
     transition: background-image 1s ease-in-out;
     background-position: center;
     background-size: cover;
+}
+@media (aspect-ratio: 16/9) {
+  .container-pt {
+    background-size: 100% auto; 
+    background-position: center top; 
+  }
 }
 .pt-title{
     padding: 100px 100px 100px 200px;
