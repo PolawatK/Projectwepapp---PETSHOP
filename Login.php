@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container-bd">
+    <?php
+    session_start();
+    $open = $_SESSION['open'] ?? null;
+    $admin_error = $_SESSION['login_error_admin'] ?? null;
+    unset($_SESSION['open'], $_SESSION['login_error_admin']);
+    ?>
+    <div class="container-bd <?php echo ($open === 'admin') ? 'active' : ''; ?>">
         <div class="head-container">
             <div class="logo">
                 <img src="img/Logo-coin.png">
@@ -33,12 +39,11 @@
                         <form action="login-success.php" method="post">
                             <h1>เข้าสู่ระบบ</h1>
                             <?php
-                            session_start();
                             if (isset($_SESSION['login_error'])) {
                             echo '<div class="error-box">';
                             echo '<p>' . $_SESSION['login_error'] . '</p>';
                             echo '</div>';
-                            unset($_SESSION['login_error']); // แสดงครั้งเดียว
+                            unset($_SESSION['login_error']); 
                             }
                             ?>
                             <div class="input-box">
@@ -61,21 +66,29 @@
                         </div>
                     </div>
                     <div class="login-admin">
-                        <form action="admin">
+                        <form action="loginadmin-success.php" method="post">
                             <h1>เข้าสู่ระบบเเอดมิน</h1>
+                            <?php
+                            if (isset($_SESSION['login_error_text'])) {
+                            echo '<div class="error-box">';
+                            echo '<p>' . $_SESSION['login_error_text'] . '</p>';
+                            echo '</div>';
+                            unset($_SESSION['login_error_text']); 
+                            }
+                            ?>
                             <div class="input-box">
                                 <i class="fa-solid fa-user"></i>
-                                <input type="text" required placeholder="Username">
+                                <input type="text" required placeholder="Username" name="admin_username">
                             </div>
                             <div class="input-box">
                                 <i class="fa-solid fa-lock"></i>
-                                <input type="password" required placeholder="Password">
+                                <input type="password" required placeholder="Password" name="admin_password">
                             </div>
                             <div class="check-box">
                                 <input type="checkbox">
                                 <p>จดจำรหัสผ่าน</p>
                             </div>
-                            <button type="submit" class="sub-btn">เข้าสู่ระบบ</button>
+                            <button type="submit" class="sub-btn" name="sub-btn-admin">เข้าสู่ระบบ</button>
                         </form>
                     </div>
                     

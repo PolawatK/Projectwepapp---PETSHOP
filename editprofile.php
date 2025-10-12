@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change profile</title>
-    <link rel="stylesheet" href="style/editprofiles.css">
+    <link rel="stylesheet" href="style/editprofile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -61,7 +61,9 @@ if (isset($_POST["sub-btn"])) {
 }
 
     $result = mysqli_query($conn, "SELECT cus_picture FROM customer WHERE cus_id = '$cus_id'");
-    $imagedp = mysqli_fetch_array($result);
+    $imageRow = mysqli_fetch_assoc($result);
+    $cus_picture = $imageRow['cus_picture'] ?? 'default.png';
+
 ?>
 
 <?php
@@ -86,7 +88,12 @@ if (isset($_POST["sub-btn"])) {
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
                     <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="bell"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
+                    <li class="#"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
+                    <li class="pic-box">
+                        <a href="editprofile.php">
+                            <img src="img/profile_pic/<?php echo $cus_picture; ?>" alt="Profile Image">
+                        </a>
+                    </li>
                     <li class="regis-btn"><a href="login.php">ออกจากระบบ</a></li>
                 </ul>
             </div>
@@ -94,15 +101,17 @@ if (isset($_POST["sub-btn"])) {
     </header>
     <nav class="main-nav" id="mainNav">
             <ul>
-                 <li><a href="user-login.php">หน้าแรก</a></li>
-                <li><a href="#">อาหารสัตว์เลี้ยง</a>
+                <li><a href="user-login.php">หน้าแรก</a></li>
+                <li><a href="user-login.php">อาหารสัตว์เลี้ยง</a>
                     <ul class="nav-dropdown">
-                        <li><a href="#">อาหารน้องหมา</a></li>
-                        <li><a href="#">อาหารน้องเเมว</a></li>
+                        <li><a href="user-login.php" >อาหารน้องหมา</a></li>
+                        <li><a href="user-login.php" >อาหารน้องเเมว</a></li>
                     </ul>
                 </li>
-                <li><a href="">ของเล่นสัตว์เลี้ยง</a></li>
-                <li><a href="">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
+                <li><a href="user-login.php">ปลอกคอเเละสายจูง</a></li>
+                <li><a href="user-login.php">กระเป๋าสัตว์เลี้ยง</a></li>
+                <li><a href="user-login.php">ของเล่นสัตว์เลี้ยง</a></li>
+                <li><a href="user-login.php">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
 <body>
@@ -111,7 +120,7 @@ if (isset($_POST["sub-btn"])) {
                 <div class="left-side">
                     <h1>รูปภาพโปรไฟล์</h1>
                     <div class ="profile-box">
-                        <img src="<?php echo 'img/profile_pic/' . $imagedp['cus_picture']; ?>" alt="Profile Image" class="dp">
+                        <img src="img/profile_pic/<?php echo $cus_picture; ?>" alt="Profile Image" class="dp">
                     </div>
                     <div class="input_box">
                         <input type="file" name="uploadfile" id="upload-btn" class="custom-file-input" value="<?=$row['cus_picture'];?>">

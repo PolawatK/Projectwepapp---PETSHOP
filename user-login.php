@@ -17,6 +17,7 @@ session_start();
     $fname = $_SESSION['cus_fname'];
     $lname = $_SESSION['cus_lname'];
     $email = $_SESSION['cus_email'];
+    $picture = $_SESSION['cus_picture'];
 ?>
 <body>
     <header>
@@ -32,7 +33,12 @@ session_start();
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
                     <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="bell"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
+                    <li class="#"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
+                    <li class="pic-box">
+                        <a href="editprofile.php">
+                            <img src="img/profile_pic/<?php echo $picture; ?>" alt="Profile Image">
+                        </a>
+                    </li>
                     <li class="regis-btn"><a href="login.php">ออกจากระบบ</a></li>
                 </ul>
             </div>
