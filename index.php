@@ -244,7 +244,29 @@
             ?>
     </div>
 
-    
+    <footer>
+    <div class="big-footer">
+        <div class="container-footer">
+            <div class="title">
+                    <h3>Contact Us</h3>
+            </div>
+            <div class="footer-content">
+                    <p>Email:GoodDayShop@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-content-eiei">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></i></a></li>
+                        <li><a href=""><i class ="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></i></a></li>
+                    </ul>  
+        </div>
+    </div>
+        <div class = bottom-bar>
+                <p>Copyright &copy; 2024 Good Day Shop All rights reserved</p>
+        </div>
+    </footer>
     
 
 
