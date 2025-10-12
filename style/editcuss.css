@@ -54,10 +54,34 @@ form{
     padding-left: 10px;
     color: rgb(150, 150, 150);
 }
+.button-box{
+    display: flex;
+}
+.button-box a{
+  width: 100%;
+}
+.exit-btn{
+    margin-top: 20px;
+    padding: 15px;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #b90101;
+    border: 2px solid #ffffff00;
+    color: #fff;
+    transition: 0.5s;
+}
+.exit-btn:hover{
+    background-color: #ffffff;;
+    color: #b90101;
+    border-radius: 10px;
+    border: 2px solid #b90101;
+}
 .sub-btn{
     margin-top: 20px;
     padding: 15px;
-    width: 100%;
+    width: 50%;
     border: none;
     border-radius: 20px;
     font-size: 18px;

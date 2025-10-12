@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>edit</title>
-    <link rel="stylesheet" href="style/editcus.css">
+    <link rel="stylesheet" href="style/editcuss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -34,7 +34,7 @@
 
 <div class="container-bd">
         <div class="regis-box">
-            <form action="adminedit-cus.php" method="post">
+            <form action="adminedit-cus.php" method="post" onsubmit="return confirm('ต้องการแก้ไขข้อมูลผู้ใช้ <?= addslashes($row['cus_fname'].' '.$row['cus_lname']); ?> หรือไม่?')">
                 <h1>เเก้ไขข้อมูลผู้ใช้</h1>
                     <div class="input-box-name">
                         <i class="fa-solid fa-user"></i>
@@ -58,7 +58,10 @@
                         <i class="fa-solid fa-phone-volume"></i>
                         <input type="text" name="cus_phone" id="cus_phone" required placeholder="เบอร์โทร" value="<?=$row['cus_phone'];?>">
                     </div>
-                    <button type="submit" class="sub-btn" name="sub-btn" id="sub-btn" >เเก้ไขข้อมูลผู้ใช้</button>
+                    <div class="button-box">
+                        <a href="admin-customer.php"><button type="button" class="exit-btn">ยกเลิก</button></a>
+                        <button type="submit" class="sub-btn" name="sub-btn" id="sub-btn" >เเก้ไขข้อมูลผู้ใช้</button>
+                    </div>
             </form>
      </div>
         
