@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สินค้า</title>
     <link rel="stylesheet" href="style/quickviews.css">
+    <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -137,6 +138,31 @@ session_start();
     </div>
     </div>
     </div>
+
+    <footer>
+    <div class="big-footer">
+        <div class="container-footer">
+            <div class="title">
+                    <h3>Contact Us</h3>
+            </div>
+            <div class="footer-content">
+                    <p>Email:GoodDayShop@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-content-eiei">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></i></a></li>
+                        <li><a href=""><i class ="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></i></a></li>
+                    </ul>  
+        </div>
+    </div>
+        <div class = bottom-bar>
+                <p>Copyright &copy; 2024 Good Day Shop All rights reserved</p>
+        </div>
+    </footer>
+
     <script src="js/quick-scripts.js"></script>
 </body>
 </html>
