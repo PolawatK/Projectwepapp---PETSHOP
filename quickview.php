@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>สินค้า</title>
     <link rel="stylesheet" href="style/quickviews.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -45,7 +45,7 @@ session_start();
             <div class="menubar">
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
-                    <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="cart"><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="#"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
                     <li class="pic-box">
                         <a href="editprofile.php">
@@ -91,9 +91,12 @@ session_start();
                         <h2>จำนวนที่มี : <?=$row['stock_qty'];?></h2> 
                     </div>
                     <div class="button_right">
-                        <div class="BTbuy">
-                            <a href="Login.php"><button>ซื้อสินค้า</button></a>
-                        </div>
+                        <form method="post" action="addcart.php" 
+                            onsubmit="return confirm('ต้องการเพิ่ม <?= htmlspecialchars($row['product_name']) ?> ลงตะกร้าหรือไม่?');">
+                            <input type="hidden" name="product_id" value="<?= $row['product_id'] ?> ">
+                            <button type="submit" name="add-btn">เพิ่มลงตะกร้า</button>
+                        </form>
+
                         <div class="BTline">
                             <a href="Line.php"><i class="fa-brands fa-line"></i></a> 
                         </div>

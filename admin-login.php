@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style/admins.css">
+    <title>หน้าหลักเเอดมิน</title>
+    <link rel="stylesheet" href="style/adminss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <?php
@@ -117,7 +117,7 @@ session_start();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php // show data by fetch from database
+                    <?php 
                             require('conn.php');
                             $sql = "SELECT OD.order_detail_id, O.order_id, P.product_name, P.price, C.cus_fname, C.cus_lname, C.cus_email  FROM order_detail as OD
                             join orders as O on OD.order_id = O.order_id

@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change profile</title>
-    <link rel="stylesheet" href="style/editprofile.css">
+    <title>เเก้ไขโปรไฟล์</title>
+    <link rel="stylesheet" href="style/editprofiles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-
 <?php
 session_start();
 require_once('conn.php'); 
@@ -75,7 +73,8 @@ if (isset($_POST["sub-btn"])) {
     $result = $conn->query($sql);
     $row = $result->fetch_assoc(); 
 ?>
- <header>
+<body>
+    <header>
         <div class="head-container">
             <div class="logo">
                 <img src="img/Shop2.png">
@@ -87,7 +86,7 @@ if (isset($_POST["sub-btn"])) {
             <div class="menubar">
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
-                    <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="cart"><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="#"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
                     <li class="pic-box">
                         <a href="editprofile.php">
@@ -114,7 +113,6 @@ if (isset($_POST["sub-btn"])) {
                 <li><a href="user-login.php">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
-<body>
     <div class ="containers">
             <form action="editprofile.php" method="POST" enctype="multipart/form-data">
                 <div class="left-side">
@@ -148,11 +146,36 @@ if (isset($_POST["sub-btn"])) {
                     <div class="input_box">
                         <p>เบอร์โทรศัพท์</p>
                         <input type="text" placeholder="เบอร์โทรศัพท์" name="cus_phone" value="<?=$row['cus_phone'];?>">
+                    </div>
                     <div class="input_box">
                         <input type="submit" value="บันทึก" class="sub-btn" name="sub-btn">
                     </div>
                 </div>
             </form>
     </div>
+    <footer>
+    <div class="big-footer">
+        <div class="container-footer">
+            <div class="title">
+                    <h3>Contact Us</h3>
+            </div>
+            <div class="footer-content">
+                    <p>Email:GoodDayShop@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-content-eiei">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></i></a></li>
+                        <li><a href=""><i class ="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></i></a></li>
+                    </ul>  
+        </div>
+    </div>
+        <div class = bottom-bar>
+                <p>Copyright &copy; 2024 Good Day Shop All rights reserved</p>
+        </div>
+    </footer>
+
 </body>
 </html>

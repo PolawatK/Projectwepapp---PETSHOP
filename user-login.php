@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style/index.css">
+    <title>GOODDAYSHOP</title>
+    <link rel="stylesheet" href="style/indexs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <?php
@@ -32,7 +32,7 @@ session_start();
             <div class="menubar">
                 <ul>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
-                    <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="cart"><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="#"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>
                     <li class="pic-box">
                         <a href="editprofile.php">
@@ -75,7 +75,7 @@ session_start();
     <div class="container-bd">
         <?php 
                 require("conn.php");
-                $sql = "SELECT * FROM product";
+               $sql = "SELECT * FROM product";
                $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -99,6 +99,9 @@ session_start();
     </div>
     </div>
     </section>
+    <video autoplay muted loop>
+        <source src="video/video_dog.mp4" type="video/mp4">
+    </video>
     <div class="infinite-container">
         <h1>แบรนด์ที่มีของในสต็อก</h1>
         <div class ="infinite">
