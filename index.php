@@ -19,8 +19,8 @@
             </div>
             <div class="menubar">
                 <ul>
-                    <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
-                    <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="bell"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+                    <li class="cart"><a href="login.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="regis-btn"><a href="login.php">เข้าสู่ระบบ</a></li>
                 </ul>
             </div>
