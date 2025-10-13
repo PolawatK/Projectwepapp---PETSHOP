@@ -52,33 +52,33 @@
     <h1 class="title-bd">สินค้าขายดี</h1>
     <hr>
     <div class="slider-hot-item">
-    <button class="l-btn"><i class="fa-solid fa-chevron-left"></i></button>
-    <button class="r-btn"><i class="fa-solid fa-chevron-right"></i></button>
-    <div class="container-bd">
-        <?php 
-                require("conn.php");
-                $sql = "SELECT * FROM product";
-               $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
-                            echo "<a href='login.php'>";
-                            echo '<div class="item-box">';
-                            echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
-                            echo '</div>';
-                            echo '  <div class="it-title">';
-                            echo '      <h2>' . $row["product_name"] . '</h2>';
-                            echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
-                            echo '  </div>';
-                            echo '</div>';
-                            echo '</a>';
+        <button class="l-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="r-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="container-bd">
+            <?php 
+                    require("conn.php");
+                    $sql = "SELECT * FROM product";
+                $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<a href='login.php'>";
+                                echo '<div class="item-box">';
+                                echo '<div class="it-img-box">';
+                                echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
+                                echo '</div>';
+                                echo '  <div class="it-title">';
+                                echo '      <h2>' . $row["product_name"] . '</h2>';
+                                echo '      <h3><strong>ราคา : </strong>' . $row["price"] . '</h3>';
+                                echo '  </div>';
+                                echo '</div>';
+                                echo '</a>';
+                            }
+                    }else {
+                            echo "ไม่มีสินค้า";
                         }
-                }else {
-                        echo "ไม่มีสินค้า";
-                    }
-                    $conn->close();
-                ?>
-    </div>
+                        $conn->close();
+                    ?>
+        </div>
     </div>
 
     <div class="infinite-container">
@@ -117,7 +117,7 @@
     <h1 class="title-bd" id="petfood">อาหารสัตว์เลี้ยง</h1>
     <hr>
     <p class="title-bd-descript" id="dogfood">🐶อาหารหมา</p>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 1";
@@ -127,7 +127,7 @@
                             echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -143,7 +143,7 @@
             ?>
     </div>
     <p class="title-bd-descript"id="catfood">🐱อาหารเเมว</p>
-    <div class="container-bd" >
+    <div class="container-bd-pro" >
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 2";
@@ -153,7 +153,7 @@
                             echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -170,7 +170,7 @@
     </div>
     <h1 class="title-bd" id="lead">ปลอกคอเเละสายจูง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 4";
@@ -180,7 +180,7 @@
                             echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -197,7 +197,7 @@
     </div>
     <h1 class="title-bd" id="petbackpack">กระเป๋าสัตว์เลี้ยง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 5";
@@ -207,7 +207,7 @@
                             echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -224,7 +224,7 @@
     </div>
     <h1 class="title-bd" id="pettoy">ของเล่นสัตว์เลี้ยง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 6";
@@ -234,7 +234,7 @@
                             echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -251,7 +251,7 @@
     </div>
     <h1 class="title-bd" id="petcare">ผลิตภัณฑ์ดูแลสุขภาพ</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 3";
@@ -261,7 +261,7 @@
                             echo "<a href='login.php'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';

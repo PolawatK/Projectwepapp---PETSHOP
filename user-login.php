@@ -82,7 +82,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -99,10 +99,41 @@ session_start();
     </div>
     </div>
     </section>
+    <div class="infinite-container">
+        <h1>แบรนด์ที่มีของในสต็อก</h1>
+        <div class ="infinite">
+            <div class = "infi-logo">
+                <img src="img/logo/1.png" alt="">
+                <img src="img/logo/2.png" alt="">
+                <img src="img/logo/3.png" alt="">
+                <img src="img/logo/4.png" alt="">
+                <img src="img/logo/5.png" alt="">
+                <img src="img/logo/6.png" alt="">
+            </div>
+
+            <div class = "infi-logo">
+                <img src="img/logo/1.png" alt="">
+                <img src="img/logo/2.png" alt="">
+                <img src="img/logo/3.png" alt="">
+                <img src="img/logo/4.png" alt="">
+                <img src="img/logo/5.png" alt="">
+                <img src="img/logo/6.png" alt="">
+            </div>
+
+            <div class = "infi-logo">
+                <img src="img/logo/1.png" alt="">
+                <img src="img/logo/2.png" alt="">
+                <img src="img/logo/3.png" alt="">
+                <img src="img/logo/4.png" alt="">
+                <img src="img/logo/5.png" alt="">
+                <img src="img/logo/6.png" alt="">
+            </div>
+        </div>
+    </div>
     <h1 class="title-bd" id="petfood">อาหารสัตว์เลี้ยง</h1>
     <hr>
     <p class="title-bd-descript" id="dogfood">🐶อาหารหมา</p>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 1";
@@ -112,7 +143,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -128,7 +159,7 @@ session_start();
             ?>
     </div>
     <p class="title-bd-descript"id="catfood">🐱อาหารเเมว</p>
-    <div class="container-bd" >
+    <div class="container-bd-pro" >
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 2";
@@ -138,7 +169,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -155,7 +186,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="lead">ปลอกคอเเละสายจูง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 4";
@@ -165,7 +196,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -182,7 +213,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="petbackpack">กระเป๋าสัตว์เลี้ยง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 5";
@@ -192,7 +223,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -209,7 +240,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="pettoy">ของเล่นสัตว์เลี้ยง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 6";
@@ -219,7 +250,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -236,7 +267,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="petcare">ผลิตภัณฑ์ดูแลสุขภาพ</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 3";
@@ -246,7 +277,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -261,6 +292,29 @@ session_start();
                     $conn->close();
             ?>
     </div>
+    <footer>
+    <div class="big-footer">
+        <div class="container-footer">
+            <div class="title">
+                    <h3>Contact Us</h3>
+            </div>
+            <div class="footer-content">
+                    <p>Email:GoodDayShop@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-content-eiei">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></i></a></li>
+                        <li><a href=""><i class ="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></i></a></li>
+                    </ul>  
+        </div>
+    </div>
+        <div class = bottom-bar>
+                <p>Copyright &copy; 2024 Good Day Shop All rights reserved</p>
+        </div>
+    </footer>
 
 
     <script src="js/index-script.js"></script>
