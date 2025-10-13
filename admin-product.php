@@ -82,7 +82,7 @@ session_start();
                                         echo "<td>".$row['unit']."</td>";
                                         echo "<td>".$row['description']."</td>";
                                         echo "<td>";
-                                        echo "<img src=".$row['image_url']." >";
+                                        echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                                         echo "</td>";
                                         echo '<td class="t-button">
                                                 <a href="adminedit-product.php?product_id='.$row['product_id'].'"><button type="button">แก้ไข</button></a>

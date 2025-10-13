@@ -15,6 +15,10 @@
     padding: 0px 150px 0px 120px;
   }
 }
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 @media screen and (min-aspect-ratio: 1.58) and (max-aspect-ratio: 1.69) {
   .main-nav {
     padding: 0px 150px 0px 150px;
@@ -253,6 +257,7 @@ nav ul li ul.nav-dropdown li a:hover{
   display: none;
 }
 .title-bd{
+    padding-top: 50px;
     padding-bottom: 20px;
     padding-left: 100px;
     color: #5a4634;
@@ -350,7 +355,7 @@ nav ul li ul.nav-dropdown li a:hover{
     color: #5a4634;
 }
 .Petfood{
- display: grid;
+  display: grid;
   margin-left: 90px;
   grid: 10px;
   grid-template-columns: repeat(5, 1fr);                        
@@ -374,6 +379,7 @@ hr{
 footer{
     background: #5a4634;
     padding-top: 30px;
+    margin-top: 200px;
 }
 
 .big-footer{
@@ -416,7 +422,6 @@ footer{
 
 .footer-content p{
     margin: auto;
-    
     color : white;
 }
 
@@ -530,4 +535,20 @@ footer{
     to{
         transform: translateX(-100%);
     }
+}
+
+.container-bd-pro{
+    height: 100%;
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.container-bd-pro a{
+    text-decoration: none;
+}
+.container-bd-pro::-webkit-scrollbar {
+  display: none;
 }

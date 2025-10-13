@@ -82,7 +82,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -133,7 +133,7 @@ session_start();
     <h1 class="title-bd" id="petfood">อาหารสัตว์เลี้ยง</h1>
     <hr>
     <p class="title-bd-descript" id="dogfood">🐶อาหารหมา</p>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 1";
@@ -143,7 +143,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -159,7 +159,7 @@ session_start();
             ?>
     </div>
     <p class="title-bd-descript"id="catfood">🐱อาหารเเมว</p>
-    <div class="container-bd" >
+    <div class="container-bd-pro" >
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 2";
@@ -169,7 +169,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -186,7 +186,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="lead">ปลอกคอเเละสายจูง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 4";
@@ -196,7 +196,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -213,7 +213,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="petbackpack">กระเป๋าสัตว์เลี้ยง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 5";
@@ -223,7 +223,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -240,7 +240,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="pettoy">ของเล่นสัตว์เลี้ยง</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 6";
@@ -250,7 +250,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
@@ -267,7 +267,7 @@ session_start();
     </div>
     <h1 class="title-bd" id="petcare">ผลิตภัณฑ์ดูแลสุขภาพ</h1>
     <hr>
-    <div class="container-bd">
+    <div class="container-bd-pro">
             <?php 
                require("conn.php");
                $sql = "SELECT * FROM product WHERE category_id = 3";
@@ -277,7 +277,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';

@@ -15,38 +15,15 @@
     justify-content: center;
     align-items: center;
 }
-.regis-box{
-    width: 500px;
-    box-shadow: 1px 1px 100px 1px rgba(0, 0, 0, 0.363);
-    border-radius: 20px;
-    background-color: #fff;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-input{
-    font-size: 15px;
-}
 form{
-    width: 100%;
-    padding: 30px;
-}
-.input-box{
-    padding-top: 20px;
-}
-.input-box input{
-    width: 100%;
-    padding: 10px 10px 10px 10px;
-}
-.check-box{
-    padding-top: 10px;
     display: flex;
 }
-.check-box p{
-    padding-left: 10px;
-    color: rgb(150, 150, 150);
+.data-box{
+    background-color: #ffffff;
+    box-shadow: 1px 1px 100px 1px rgba(0, 0, 0, 0.315);
+    border-radius: 20px;
+    width: 500px;
+    padding: 30px 60px 40px 60px;
 }
 .sub-btn{
     margin-top: 20px;
@@ -66,21 +43,28 @@ form{
     border-radius: 10px;
     border: 2px solid #7a5e46;
 }
+.input-box-name{
+    display: flex;
+    width: 100%;
+}
+.left {
+    width: 100%;
+}
 .left input{
-    padding: 10px 10px 10px 10px;
-    width: 90%;
+    padding: 10px;
+}
+.right{
+    width: 100%;
 }
 .right input{
-  padding: 10px 10px 10px 10px;
-    width: 70%;
+    padding: 10px;
 }
-.input-box-name{
+.input-box{
     padding-top: 20px;
-    display: flex;
 }
-.lname{
-    padding: 10px 20px 10px 10px;
-    margin-left: 10px;
+.input-box input{
+    width: 100%;
+    padding: 10px 10px 10px 10px;
 }
 .text-box{
     padding-top: 20px;
@@ -105,4 +89,58 @@ form{
   cursor: not-allowed;         
   opacity: 0.6;               
   transition: 0.3s ease;       
+}
+.button-box{
+    display: flex;
+}
+.button-box a{
+    margin-right: 50px;
+}
+.exit-btn{
+    width: 100px;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #b90101;
+    border: 2px solid #ffffff00;
+    color: #fff;
+    transition: 0.5s;
+}
+.exit-btn:hover{
+    background-color: #ffffff;;
+    color: #b90101;
+    border-radius: 10px;
+    border: 2px solid #b90101;
+}
+.image-box{
+    margin-top: 40px;
+    height: 600px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px 0px 0px 20px;
+    
+}
+.image-box img{
+    width: auto;
+    height: 500px;
+}
+.custom-file-input::-webkit-file-upload-button{
+    background-color: #fff;
+    border: 2px solid #7a5e46;
+    color: #7a5e46;
+    font-weight: 600;
+    padding: 10px;
+    width: 160px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+input[type='file']{
+    color: #000000;
+}
+.custom-file-input::-webkit-file-upload-button:hover{
+    background-color: #7a5e46;;
+    font-weight: 600;
+    color: #ffffff;
 }

@@ -76,7 +76,7 @@ session_start();
             <div class="BGProduct">
                 <div class="data_left">
                     <div class="zoom">
-                        <img src="<?=$row['image_url'];?>" >
+                        <img src="img/Productimg/<?=$row['image_url'];?>" >
                     </div>
                 </div>
                 <div class="data_right">
@@ -117,7 +117,7 @@ session_start();
                             echo "<a href='quickview.php?product_id=" . $row['product_id'] . "'>";
                             echo '<div class="item-box">';
                             echo '<div class="it-img-box">';
-                            echo '<img src="' . $row["image_url"] . '" alt="">';
+                            echo '<img src="img/Productimg/' . $row['image_url'] . '" >';
                             echo '</div>';
                             echo '  <div class="it-title">';
                             echo '      <h2>' . $row["product_name"] . '</h2>';
