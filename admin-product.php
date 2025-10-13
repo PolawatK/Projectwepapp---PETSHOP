@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style/adminedit.css">
+    <link rel="stylesheet" href="style/adminedits.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <?php
@@ -47,7 +47,10 @@ session_start();
         </ul>
     </nav>
     <div class="container-data">
-        <h1>จัดการสินค้า</h1>
+        <div class="title-box">
+            <h1>จัดการสินค้า</h1>
+            <a href="admininsert-product.php"><button>เพิ่มสินค้า<i class="fa-solid fa-plus"></i></button></a>
+        </div>
         <hr>
         <div class="table-data">
             <table>
@@ -86,7 +89,7 @@ session_start();
                                         echo "</td>";
                                         echo '<td class="t-button">
                                                 <a href="adminedit-product.php?product_id='.$row['product_id'].'"><button type="button">แก้ไข</button></a>
-                                                <form method="post" action="delete-customer.php" onsubmit="return confirm(\'ต้องการลบผู้ใช้ '.addslashes($row['product_name']).' หรือไม่?\');">
+                                                <form method="post" action="delete-product.php" onsubmit="return confirm(\'ต้องการลบสินค้า '.addslashes($row['product_name']).' หรือไม่?\');">
                                                     <input type="hidden" name="product_id" value="'.$row['product_id'].'">
                                                     <button type="submit" name="delete-btn">ลบ</button>
                                                 </form>

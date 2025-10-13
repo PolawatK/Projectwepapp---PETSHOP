@@ -13,7 +13,8 @@
             header("refresh: 0; url=admin-customer.php");
         }
         require 'conn.php';
-        $sql = "SELECT * FROM customer WHERE cus_id='$_GET[cus_id]'";
+        $sql = "SELECT * FROM customer WHERE cus_id='{$_GET['cus_id']}'";
+
         $result = $conn->query($sql);
         $row = mysqli_fetch_array($result);
     ?>
@@ -24,10 +25,8 @@
     $result= $conn->query($sql_update);
         if(!$result) {
             die("Error God Damn it : ". $conn->error);
-        } echo "<script>
-            alert('อัพเดตข้อมูลสำเร็จ!');
-            window.location.href = 'admin-customer.php';
-            </script>";
+        } echo 
+            header("Location: admin-customer.php");
              exit;
     }
         ?>
