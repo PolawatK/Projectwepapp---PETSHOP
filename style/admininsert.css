@@ -23,7 +23,7 @@ form{
     box-shadow: 1px 1px 100px 1px rgba(0, 0, 0, 0.315);
     border-radius: 20px;
     width: 500px;
-    padding: 30px 60px 40px 60px;
+    padding: 10px 60px 10px 60px;
 }
 .sub-btn{
     margin-top: 20px;
@@ -62,7 +62,7 @@ form{
     width: 100%;
 }
 .input-box{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .input-box input{
     width: 100%;
