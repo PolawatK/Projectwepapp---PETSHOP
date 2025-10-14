@@ -31,6 +31,7 @@ session_start();
             </div>
             <div class="menubar">
                 <ul>
+                    <li class="bell"><a href="orderhistory.php"><i class="fa-solid fa-clock-rotate-left"></i></a></li>
                     <li class="bell"><a href=""><i class="fa-solid fa-bell"></i></a></li>
                     <li class="cart"><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="#"><a href="editprofile.php">สวัสดีคุณ <?php echo ($fname); ?> </a></li>

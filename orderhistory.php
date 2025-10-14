@@ -9,18 +9,20 @@
 </head>
 <body>
 <?php
-    require_once("conn.php");
-    session_start();
+session_start();
+require_once("conn.php");
 
-    if (!isset($_SESSION['cus_email'])) {
+if (!isset($_SESSION['cus_id'])) {
     header("Location: login.php");
     exit();
 }
-    $cus_id = $_SESSION["cus_id"];
-    $fname = $_SESSION['cus_fname'];
-    $lname = $_SESSION['cus_lname'];
-    $email = $_SESSION['cus_email'];
-    $picture = $_SESSION['cus_picture'];
+$fname = $_SESSION['cus_fname'];
+$lname = $_SESSION['cus_lname'];
+$email = $_SESSION['cus_email'];
+$picture = $_SESSION['cus_picture'];
+$cus_id = $_SESSION["cus_id"];
+$sql_orders = "SELECT * FROM orders WHERE cus_id = '$cus_id' ORDER BY order_date DESC";
+$result = $conn->query($sql_orders);
 ?>
 
    <header>
@@ -64,71 +66,31 @@
                 <li><a href="#petcare">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
-<h1 class="title-bd">รายการสินค้าของคุณ</h1>
+<h1 class="title-bd">ประวัติการสั่งซื้อสินค้า</h1>
 <div class="container-bd">
-    <?php
-$cus_id = $_SESSION["cus_id"];
-$sql = "
-    SELECT 
-        p.product_id,
-        p.product_name,
-        p.price,
-        p.image_url,
-        ci.quantity,
-        ci.cart_id,
-        ci.unit_price_snapshot,
-        (ci.quantity * ci.unit_price_snapshot) AS subtotal
-    FROM cart c
-    INNER JOIN cart_item ci ON c.cart_id = ci.cart_id
-    INNER JOIN product p ON ci.product_id = p.product_id
-    WHERE c.cus_id = '$cus_id'
-";
-
-$result = $conn->query($sql);
+<?php
 
 if ($result && $result->num_rows > 0) {
-    echo "<table>";
-    echo "<tr>
-            <th colspan='2'>สินค้า</th>
-            <th>จำนวน</th>
-            <th>ราคาต่อหน่วย</th>
-            <th>ราคารวม</th>
-          </tr>";
-
-    $total = 0;
-    while ($row = $result->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td><img src='img/Productimg/" . $row['image_url'] . "' width='80'></td>";
-        echo "<td>" . $row['product_name'] . "</td>";
-        echo "<td>" . $row['quantity'] . "</td>";
-        echo "<td>" . $row['price']. "</td>";
-        echo "<td>" . $row['subtotal']."</td>";
-         echo '<td>
-                <form method="post" action="delete-cart.php";
-                onsubmit="return confirm(\'ต้องการลบสินค้า '.addslashes($row['product_name']).' หรือไม่?\');">
-                            <input type="hidden" name="product_id" value="'.$row['product_id'].'">
-                            <input type="hidden" name="cart_id" value='.$row['cart_id'].'>
-                <button type="submit" name="delete-btn">ลบ</button>
-                </form>
-                </td>';
-        echo "</tr>";
-        $total += $row['subtotal'];
+    echo"<table>";
+        echo "<tr>
+                <th>รหัสออเดอร์</th>
+                <th>วันที่สั่งซื้อ</th>
+                <th>ราคาที่สั่งซื้อ</th>
+            </tr>";
+        $total = 0;
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo    "<td>" . $row['order_id'] . "</td>";
+            echo    "<td>" . $row['order_date'] . "</td>";
+            echo    "<td>" . $row['total_price']. " บาท</td>";
+            echo "</tr>";
     }
-
-    echo "<tr><td colspan='4' class ='total'>รวมทั้งหมด</td><td class='num-total'>" . number_format($total, 2) . " บาท</td></tr>";
-    echo "</table>";
-} else {
-    echo "ไม่มีสินค้าในตะกร้า";
+    echo"</table>";
+}else{
+    echo "ไม่มีประวัติการซื้อสินค้า";
 }
 ?>
 
-
-</div>
-<div class="checkout">
-    <form method="post" action="checkout.php" onsubmit="return confirm('ยืนยันการสั่งซื้อสินค้าทั้งหมดหรือไม่?');">
-        <input type="hidden" name="cart_id" value="<?= $row['cart_id'] ?>">
-        <button type="submit" name="checkout-btn" class="buy-btn">สั่งซื้อสินค้า</button>
-    </form>
 
 </div>
 

@@ -42,9 +42,9 @@ nav ul li:hover i{
 .active i{
     color: #7a5e46;
 }
+
 .container-bd{
     display: flex;
-    width: 100%;
     height: 100vh;
 }
 .table-data{
@@ -60,6 +60,7 @@ nav ul li:hover i{
 }
 .container-data{
     width: 100%;
+    height: 550px;
     padding: 40px;
 }
 .table-data{
@@ -127,28 +128,44 @@ td img{
     width: 50px;
     height: 50px;
 }
-.title-box{
+
+body{
     display: flex;
 }
-.title-box button{
-    color: #fff;
-    background-color: rgb(31, 146, 31);
-    font-size: 20px;
-    margin-left: 200px;
-    padding: 10px 20px 10px 20px;
+
+.body-content{
+    width: 100%;
+}
+
+.container-eiei{
+    display: flex;
+}
+.static-box{
+    width: 100%;
+    padding: 50px 150px 50px 150px;
+    justify-content: space-between;
+    display: flex;
+}
+.static{
+    padding: 20px;
+    width: 250px;
     border-radius: 20px;
-    border: 2px solid rgb(126, 126, 126);
     transition: 0.5s;
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.225);
 }
-.title-box button i{
-    color: #fff;
-    transition: 0.5s;
+.static:hover{
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.545);
+    transform: translateY(-3px);
 }
-.title-box button:hover{
-    background-color: transparent;
-    color: black;
+
+.body-content h1{
+    text-align: center;
+    margin: 50px;
 }
-.title-box button:hover i{
-    transform: rotate(90deg);
-    color: black;
+
+.dashboard-bd{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
