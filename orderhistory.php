@@ -54,16 +54,16 @@ $result = $conn->query($sql_orders);
 <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="user-login.php">หน้าแรก</a></li>
-                <li><a href="#petfood">อาหารสัตว์เลี้ยง</a>
+                <li><a href="user-login.php">อาหารสัตว์เลี้ยง</a>
                     <ul class="nav-dropdown">
-                        <li><a href="#dogfood" >อาหารน้องหมา</a></li>
-                        <li><a href="#catfood" >อาหารน้องเเมว</a></li>
+                        <li><a href="user-login.php" >อาหารน้องหมา</a></li>
+                        <li><a href="user-login.php" >อาหารน้องเเมว</a></li>
                     </ul>
                 </li>
-                <li><a href="#lead">ปลอกคอเเละสายจูง</a></li>
-                <li><a href="#petbackpack">กระเป๋าสัตว์เลี้ยง</a></li>
-                <li><a href="#pettoy">ของเล่นสัตว์เลี้ยง</a></li>
-                <li><a href="#petcare">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
+                <li><a href="user-login.php">ปลอกคอเเละสายจูง</a></li>
+                <li><a href="user-login.php">กระเป๋าสัตว์เลี้ยง</a></li>
+                <li><a href="user-login.php">ของเล่นสัตว์เลี้ยง</a></li>
+                <li><a href="user-login.php">ผลิตภัณฑ์ดูแลสุขภาพ</a></li>
             </ul>
         </nav>
 <h1 class="title-bd">ประวัติการสั่งซื้อสินค้า</h1>
