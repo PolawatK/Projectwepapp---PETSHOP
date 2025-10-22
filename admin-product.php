@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>จัดการสินค้า</title>
-    <link rel="stylesheet" href="style/adminedits.css">
+    <link rel="stylesheet" href="style/adminedit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <?php
@@ -48,6 +48,9 @@ session_start();
                 </li>
             </a>
         </ul>
+        <div class="logout-btn-box">
+            <a href="login.php"><button class="logout-btn">ออกจากระบบ</button></a>
+        </div>
     </nav>
     <div class="container-data">
         <div class="title-box">

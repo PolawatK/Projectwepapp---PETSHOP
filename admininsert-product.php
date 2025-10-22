@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เพิ่มข้อมูลสินค้า</title>
-    <link rel="stylesheet" href="style/admininsert.css">
+    <link rel="stylesheet" href="style/admininserts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -54,8 +54,15 @@
                         <input type="text" name="product_name" class="product_name" required placeholder="ชื่อสินค้า" >
                         </div>
                         <div class="right">
-                        <p>รหัสประเภทสินค้า</p>
-                        <input type="text" name="category_id" class="category_id" required placeholder="รหัสประเภทสินค้า" >
+                        <p>ประเภทสินค้า</p>
+                        <select name="category_id" id="category_id" required>
+                            <option value="1">อาหารสุนัข</option>
+                            <option value="2">อาหารแมว</option>
+                            <option value="3">ทราย/สุขอนามัย</option>
+                            <option value="4">ปลอกคอ/สายจูง</option>
+                            <option value="5">กระเป๋าสัตว์</option>
+                            <option value="6">ของเล่นสัตว์เลี้ยง</option>
+                        </select>
                         </div>  
                     </div>
                     <div class="input-box">

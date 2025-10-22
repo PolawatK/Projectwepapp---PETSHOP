@@ -162,3 +162,21 @@ td img{
     transform: rotate(90deg);
     color: black;
 }
+.logout-btn{
+    color: #fff;
+    background-color: #d03400;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.2s;
+    width: 70%;
+}
+.logout-btn:hover{
+    background-color: transparent;
+}
+.logout-btn-box{
+    margin-top: 200px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
